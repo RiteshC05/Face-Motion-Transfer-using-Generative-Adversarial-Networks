@@ -38,7 +38,13 @@ PIL
 dLib (http://dlib.net/)
 
 Syntax:
-Spython3 ganfinal.py
+python3 ganfinal.py
 -----------------------------------------------------------------------------------------------------------
 
+Temporal Smoothing --Optional 
 
+You can run temp_smooth.py to smooth the video sequence in the temporal domain. This should be done before the training phase and after extracting the landmark points.
+
+Syntax
+python3 temp_smooth.py
+---------------------------------------------------------------------------------------------------------
