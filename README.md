@@ -37,7 +37,8 @@ OpenCV
 PIL
 dLib (http://dlib.net/)
 
-python3 ganfinal.py
+Syntax:
+Spython3 ganfinal.py
 -----------------------------------------------------------------------------------------------------------
 
 
