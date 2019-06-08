@@ -114,9 +114,7 @@ class GAN():
         training_data = []
 
         #Finds all files in datafolder
-        #datafolder = 'D:/DU SPRING 2019/1.CV/GROUP PROJECT/Video_Song_Actor_01/Actor_01/1.resized'
-        #datafolder = 'D:/DU SPRING 2019/1.CV/GROUP PROJECT/Video_Song_Actor_01/Actor_01/01.allnew'
-        datafolder = '/content/drive/My Drive/LATEST2/croppedFaces'
+        datafolder = '/content/drive/My Drive/LATEST2/croppedFaces' #####Change folder to your folder containing croppedfaces
         filenames = os.listdir(datafolder)
         for filename in tqdm(filenames):
             #Combines folder name and file name.
@@ -153,8 +151,7 @@ class GAN():
         valid = np.ones((batch_size, 1))
         fake = np.zeros((batch_size, 1))
         training_points = []
-        #data_folder2 = 'D:/DU SPRING 2019/1.CV/GROUP PROJECT/Video_Song_Actor_01/Actor_01/land_res'
-        data_folder2 = '/content/drive/My Drive/LATEST2/croppedLand'
+        data_folder2 = '/content/drive/My Drive/LATEST2/croppedLand' ##############Change folder to your folder containing landmarks
   
   
         #Finds all files in datafolder
@@ -216,8 +213,7 @@ class GAN():
         noise = np.random.normal(0, 1, (r * c, self.latent_dim))
         
         training_points = []
-#        data_folder2 = 'D:/DU SPRING 2019/1.CV/GROUP PROJECT/Video_Song_Actor_01/Actor_01/land_res'
-        data_folder2 = '/content/drive/My Drive/LATEST2/croppedLand'
+        data_folder2 = '/content/drive/My Drive/LATEST2/croppedLand'####### Change folder to your folder containing landmark points
   
   
         #Finds all files in datafolder
@@ -260,28 +256,4 @@ class GAN():
 if __name__ == '__main__':
     gan = GAN()
     gan.train(epochs=1001, batch_size=100, sample_interval=100)
-    gan.save_model("/content/drive/My Drive/LATEST2/Gantrained.h5")
-
-tensorflow --version
-
-from keras.models import load_model
-model=load_model("/content/drive/My Drive/LATEST2/Gantrained.h5") 
-model.summary()
-
-test_datagen = ImageDataGenerator(rescale=1./255)
-
-test_generator = test_datagen.flow_from_directory(
-        "/content/drive/My Drive/Latest2/inputldpts/",
-        target_size=(104, 104),
-        color_mode="rgb",
-        shuffle = False,
-        class_mode='categorical',
-        batch_size=1)
-
-filenames = test_generator.filenames
-nb_samples = len(filenames)
-
-predict = model.predict_generator(test_generator,steps = nb_samples)
-
-from google.colab import drive
-drive.mount('/content/drive/')
+    gan.save_model("/content/drive/My Drive/LATEST2/Gantrained.h5") ############### Change folder to your path to save model
