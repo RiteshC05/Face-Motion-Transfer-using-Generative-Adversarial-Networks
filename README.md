@@ -45,7 +45,7 @@ Temporal Smoothing --Optional
 
 You can run temp_smooth.py to smooth the video sequence in the temporal domain. This should be done before the training phase and after extracting the landmark points.
 
-Syntax
+Syntax:
 python3 temp_smooth.py
 ---------------------------------------------------------------------------------------------------------
 Additionally you can also use the cropped faces and landmarks provided in the Data For training zip file 
