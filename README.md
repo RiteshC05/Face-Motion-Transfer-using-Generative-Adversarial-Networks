@@ -12,7 +12,7 @@ For the acquiring the data, we first need to extract the frames from the the vid
 Copy all the video sequences that you wish your model to train on into a folder.
 Change the folder path in the commented section in extract.py to the folder containing your video.
 
-Syntax - 
+Syntax: 
 python3 extract.py
 --------------------------------------------------------------------------------------------------------
 Extract Landmark points
