@@ -1,5 +1,5 @@
 # CS583FinalProject
-=======================================
+
 README
 =======================================
 This project maps the facial motions from a source video to a target video.
