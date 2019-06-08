@@ -5,8 +5,9 @@ README
 This project maps the facial motions from a source video to a target video.
 
 Training Phase- 
+
 The training is done on the target video where the GAN learns to generate synthesized faces. the input to the GAN consists of each frames from the video sequences and the corresponsing landmark points from each frames.
----------------------------------------------------------------------------
+
 For the acquiring the data, we first need to extract the frames from the the video sequence. Use the code extract.py
 Copy all the video sequences that you wish your model to train on into a folder.
 Change the folder path in the commented section in extract.py to the folder containing your video.
@@ -21,6 +22,7 @@ Dependency Download : In order to extract the facial landmark points, you will n
 https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat
 
 Run extractFACE.py to extract the faces and landmarks
+
 Syntax:
 python3 extractFACE.py
 -----------------------------------------------------------------------------------------------------------
