@@ -48,3 +48,4 @@ You can run temp_smooth.py to smooth the video sequence in the temporal domain. 
 Syntax
 python3 temp_smooth.py
 ---------------------------------------------------------------------------------------------------------
+Additionally you can also use the cropped faces and landmarks provided in the Data For training zip file 
