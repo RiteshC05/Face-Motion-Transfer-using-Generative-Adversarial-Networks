@@ -1,4 +1,4 @@
-# CS583FinalProject
+# Face Motion Transfer using Video to Video Synthesis
 
 README
 =======================================
